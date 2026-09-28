@@ -19,7 +19,6 @@ jobs:
           T_CI: ${{ secrets.T_CI }}
           T_CS: ${{ secrets.T_CS }}
           T_RT: ${{ secrets.T_RT }}
-          T_UI: ${{ secrets.T_UI }}
           T_PI_ALBUMS: ${{ secrets.T_PI_ALBUMS }}
           T_PI_EPS: ${{ secrets.T_PI_EPS }}
           T_PI_SINGLES: ${{ secrets.T_PI_SINGLES }}

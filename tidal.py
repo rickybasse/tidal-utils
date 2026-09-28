@@ -30,7 +30,6 @@ IGNORE = {
 client_id = os.getenv("T_CI")
 client_secret = os.getenv("T_CS")
 refresh_token = os.getenv("T_RT")
-user_id = os.getenv("T_UI")
 albums_pi = os.getenv("T_PI_ALBUMS")
 eps_pi = os.getenv("T_PI_EPS")
 singles_pi = os.getenv("T_PI_SINGLES")
@@ -103,7 +102,7 @@ if __name__ == "__main__":
 
     artists = load_pickle("tidal_artists.pkl")
     if not artists:
-        url = f"{API}/userCollections/{user_id}/relationships/tracks?countryCode={COUNTRY_CODE}"
+        url = f"{API}/userCollectionTracks/me/relationships/items?countryCode={COUNTRY_CODE}"
         track_ids = []
         while url:
             batch, url = get_collection_tracks(url, access_token)
